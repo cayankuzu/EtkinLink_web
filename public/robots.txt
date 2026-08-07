@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /auth/
+
+Sitemap: https://cayankuzu.github.io/EtkinLink_web/sitemap.xml

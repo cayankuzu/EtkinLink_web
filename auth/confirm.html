@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <meta name="theme-color" content="#5b4bff" />
+    <link rel="icon" href="/EtkinLink_web/favicon.svg" />
+    <title>E-posta doğrulama · EtkinLink</title>
+  </head>
+  <body class="auth-body">
+    <main class="auth-shell">
+      <aside class="auth-aside">
+        <a class="brand" href="/EtkinLink_web/" aria-label="EtkinLink ana sayfa"
+          ><span class="brand-mark" aria-hidden="true">↔</span
+          ><span>EtkinLink</span></a
+        >
+        <div class="auth-aside-copy">
+          <h1>Bağlantın burada başlıyor.</h1>
+          <p>
+            E-posta doğrulaması hesabını korur ve yalnızca sana ait bir adresle
+            devam edilmesini sağlar.
+          </p>
+        </div>
+      </aside>
+      <section class="auth-main">
+        <div class="auth-card">
+          <div
+            class="auth-state"
+            data-confirm-state
+            role="status"
+            aria-live="polite"
+          >
+            <div class="status-icon" aria-hidden="true">•</div>
+            <h1>E-posta doğrulanıyor</h1>
+            <p>Güvenli bağlantı kontrol ediliyor, lütfen bekleyin…</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/src/auth/confirm.ts"></script>
+  </body>
+</html>
