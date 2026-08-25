@@ -3,161 +3,101 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#5b4bff" />
+    <meta name="theme-color" content="#ffffff" />
     <meta
       name="description"
-      content="EtkinLink; Türkiye'deki etkinlikler etrafında güvenli sosyalleşme, etkinlik odaları ve karşılıklı eşleşme deneyimi sunar."
+      content="EtkinLink; aynı etkinliğe ilgi duyan insanları güvenle keşfetmenizi, etkinlik odalarına katılmanızı ve karşılıklı eşleşme sonrası mesajlaşmanızı sağlar."
     />
-    <link rel="icon" href="/EtkinLink_web/favicon.svg" />
+    <link rel="icon" type="image/png" href="./assets/brand/app-icon.png" />
     <link rel="canonical" href="https://cayankuzu.github.io/EtkinLink_web/" />
-    <title>EtkinLink · Etkinlik etrafında güvenli sosyalleşme</title>
+    <title>EtkinLink · Etkinlik etrafında güvenle bağlan</title>
   </head>
-  <body>
+  <body class="landing-body">
     <div data-site-header></div>
     <main id="main-content">
-      <section class="hero">
-        <div class="container">
-          <p class="eyebrow">Güvenli · Etkinlik odaklı · Karşılıklı</p>
-          <h1>
-            Etkinlik etrafında <span>güvenli sosyalleşme</span> ve eşleşme.
-          </h1>
+      <section class="landing-hero" aria-labelledby="hero-title">
+        <div class="container landing-hero-inner">
+          <img
+            class="app-icon"
+            src="./assets/brand/app-icon.png"
+            width="96"
+            height="96"
+            alt="EtkinLink uygulama ikonu"
+          />
+          <p class="eyebrow">Etkinlik merkezli sosyal keşif</p>
+          <h1 id="hero-title">Etkinlik etrafında<br />güvenle bağlan.</h1>
           <p class="hero-lead">
             Aynı etkinliğe ilgi duyan insanları keşfet, katıldığın etkinliğin
             odasına katıl ve yalnızca karşılıklı beğeni sonrası bire bir
             mesajlaş.
           </p>
           <div class="hero-actions">
-            <a class="button" href="#nasil-calisir">Nasıl çalıştığını gör</a>
+            <a class="button" href="#nasil-calisir">Ürün turunu keşfet</a>
             <a class="button button-secondary" href="./legal/community.html"
               >Topluluk kuralları</a
             >
           </div>
+          <p class="hero-caption">
+            18+ · Güvenlik, karşılıklı onay ve etkinlik bağlamı varsayılandır.
+          </p>
         </div>
       </section>
 
-      <section id="nasil-calisir" class="section section-white">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Basit ve kontrollü akış</p>
-            <h2>Etkinlikten bağlantıya, üç adımda</h2>
+      <section
+        id="nasil-calisir"
+        class="product-tour-section"
+        aria-labelledby="tour-title"
+      >
+        <div class="container product-tour-panel">
+          <div class="tour-copy">
+            <p class="eyebrow">Canlı ürün turu</p>
+            <h2 id="tour-title">Beş gerçek ekran. Tek bir akış.</h2>
             <p>
-              EtkinLink, rastgele mesajlaşmayı değil ortak etkinlik bağlamını
-              merkeze alır.
+              Mockup, gönderdiğin EtkinLink prototipindeki gerçek ekranları
+              sırayla gösterir.
             </p>
           </div>
-          <div class="card-grid">
-            <article class="info-card">
-              <span class="number">01</span>
-              <h3>Etkinliği keşfet</h3>
-              <p>
-                Türkiye'deki gerçek etkinlikleri şehir, tarih, tür ve ilgi
-                alanına göre bul.
-              </p>
-            </article>
-            <article class="info-card">
-              <span class="number">02</span>
-              <h3>Etkinlik odasına katıl</h3>
-              <p>
-                Katılımcılara özel topluluk odasında plan yap, bilgi paylaş ve
-                sohbet et.
-              </p>
-            </article>
-            <article class="info-card">
-              <span class="number">03</span>
-              <h3>Karşılıklı eşleş</h3>
-              <p>
-                Aynı etkinlikteki kişiler arasında yalnızca karşılıklı beğeniyle
-                özel sohbet aç.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
 
-      <section id="guvenlik" class="section">
-        <div class="container">
-          <div class="safety-banner">
-            <div>
-              <p class="eyebrow">Güvenlik varsayılan olmalı</p>
-              <h2>Sınırları belli bir sosyal deneyim</h2>
-              <p>
-                Etkinlik odaları katılımcılarla sınırlıdır. Bire bir mesaj ancak
-                iki tarafın da beğenmesiyle açılır. Kullanıcılar her an
-                bildirebilir ve engelleyebilir.
-              </p>
-            </div>
-            <ul class="check-list">
-              <li>18 yaş ve üzeri kullanım</li>
-              <li>Karşılıklı onay olmadan özel mesaj yok</li>
-              <li>Etkinlik bazlı oda ve eşleşme</li>
-              <li>Bildirme, engelleme ve içerik denetimi</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+          <a
+            class="phone-mock"
+            data-product-tour
+            href="https://www.figma.com/proto/RLPPToWydcFxLtnlvTr0mi/EtkinLink?node-id=32-1772&viewport=-607%2C-758%2C0.69&t=BmlrdaiaacIsarlK-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=97%3A386&show-proto-sidebar=1&page-id=12%3A8"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="EtkinLink canlı prototipini yeni sekmede aç"
+          >
+            <span class="phone-screen">
+              <img
+                data-tour-image
+                src="./assets/product/01-discover.png"
+                width="390"
+                height="844"
+                alt="EtkinLink Keşfet ekranı"
+              />
+            </span>
+            <span class="phone-hover" aria-hidden="true">
+              <span>Canlı prototipi aç</span><span>↗</span>
+            </span>
+          </a>
 
-      <section id="yasal" class="section section-white">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Şeffaflık merkezi</p>
-            <h2>Veriniz, haklarınız ve kurallar</h2>
-            <p>
-              Politikalarımızı sade Türkçe ile, erişilebilir ve ayrı sayfalarda
-              sunuyoruz.
-            </p>
+          <div
+            class="tour-controls"
+            role="group"
+            aria-label="Ürün turu ekranları"
+          >
+            <button class="is-active" type="button" data-tour-index="0">
+              Keşfet
+            </button>
+            <span aria-hidden="true">•</span>
+            <button type="button" data-tour-index="1">Etkinlik</button>
+            <span aria-hidden="true">•</span>
+            <button type="button" data-tour-index="2">Oda</button>
+            <span aria-hidden="true">•</span>
+            <button type="button" data-tour-index="3">Eşleşme</button>
+            <span aria-hidden="true">•</span>
+            <button type="button" data-tour-index="4">Mesaj</button>
           </div>
-          <div class="card-grid">
-            <article class="legal-card">
-              <div class="icon-box" aria-hidden="true">K</div>
-              <h3>KVKK Aydınlatma Metni</h3>
-              <p>
-                İşlenen kişisel veriler, amaçlar, hukuki sebepler ve başvuru
-                hakları.
-              </p>
-              <a href="./legal/kvkk.html">Metni incele →</a>
-            </article>
-            <article class="legal-card">
-              <div class="icon-box" aria-hidden="true">G</div>
-              <h3>Gizlilik Politikası</h3>
-              <p>
-                Veri güvenliği, saklama, hizmet sağlayıcılar ve kullanıcı
-                kontrolleri.
-              </p>
-              <a href="./legal/privacy.html">Politikayı incele →</a>
-            </article>
-            <article class="legal-card">
-              <div class="icon-box" aria-hidden="true">18+</div>
-              <h3>Çocuk Güvenliği</h3>
-              <p>
-                Yaş sınırı, çocukların cinsel istismarına karşı sıfır tolerans
-                ve bildirim.
-              </p>
-              <a href="./legal/child-safety.html">Standartları incele →</a>
-            </article>
-            <article class="legal-card">
-              <div class="icon-box" aria-hidden="true">✓</div>
-              <h3>Topluluk Kuralları</h3>
-              <p>Saygılı etkileşim, yasak içerikler ve yaptırım süreçleri.</p>
-              <a href="./legal/community.html">Kuralları incele →</a>
-            </article>
-            <article class="legal-card">
-              <div class="icon-box" aria-hidden="true">§</div>
-              <h3>Kullanım Koşulları</h3>
-              <p>
-                Hesap, uygun kullanım, etkinlik bilgileri ve sorumluluk
-                sınırları.
-              </p>
-              <a href="./legal/terms.html">Koşulları incele →</a>
-            </article>
-            <article class="legal-card">
-              <div class="icon-box" aria-hidden="true">×</div>
-              <h3>Hesap ve Veri Silme</h3>
-              <p>Hesabınızı uygulama içinden kalıcı olarak silme süreci.</p>
-              <a href="./legal/account-deletion.html"
-                >Silme sürecini incele →</a
-              >
-            </article>
-          </div>
+          <p class="tour-hint">Üzerine gel veya dokun · prototipi aç</p>
         </div>
       </section>
     </main>

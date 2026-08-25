@@ -3,6 +3,16 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   base: "/EtkinLink_web/",
+  optimizeDeps: {
+    exclude: [
+      "@supabase/supabase-js",
+      "@supabase/auth-js",
+      "@supabase/functions-js",
+      "@supabase/realtime-js",
+      "@supabase/postgrest-js",
+      "@supabase/storage-js",
+    ],
+  },
   build: {
     target: "es2022",
     rollupOptions: {
@@ -19,6 +29,7 @@ export default defineConfig({
         ),
         confirm: resolve(import.meta.dirname, "auth/confirm.html"),
         resetPassword: resolve(import.meta.dirname, "auth/reset-password.html"),
+        support: resolve(import.meta.dirname, "support.html"),
         notFound: resolve(import.meta.dirname, "404.html"),
       },
     },

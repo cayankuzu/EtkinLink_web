@@ -9,6 +9,22 @@ import {
 } from "./client";
 
 const state = document.querySelector<HTMLElement>("[data-confirm-state]");
+const base = import.meta.env.BASE_URL;
+const link = (path: string) => `${base}${path.replace(/^\//, "")}`;
+
+function escapeHtml(value: string): string {
+  return value.replace(
+    /[&<>"']/g,
+    (character) =>
+      ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#039;",
+      })[character] ?? character,
+  );
+}
 
 function render(
   kind: "loading" | "success" | "error",
@@ -16,22 +32,28 @@ function render(
   message: string,
 ): void {
   if (!state) return;
-  const icon = kind === "success" ? "✓" : kind === "error" ? "!" : "•";
-  const iconClass = kind === "loading" ? "" : kind;
+  state.dataset.state = kind;
+  const icon =
+    kind === "loading"
+      ? '<span class="loading-ring"></span>'
+      : kind === "success"
+        ? "✓"
+        : "!";
+  const iconClass = kind === "loading" ? "is-loading" : kind;
   state.innerHTML = `
     <div class="status-icon ${iconClass}" aria-hidden="true">${icon}</div>
-    <h1>${title}</h1>
-    <p>${message}</p>
+    <h1>${escapeHtml(title)}</h1>
+    <p>${escapeHtml(message)}</p>
     ${
       kind === "success"
         ? `<div class="button-row">
             <a class="button" href="etkinlink://auth/callback?verified=1">EtkinLink'i aç</a>
-            <a class="button button-secondary" href="/EtkinLink_web/">Ana sayfaya dön</a>
+            <a class="button button-secondary" href="${link("index.html")}">Ana sayfaya dön</a>
           </div>`
         : kind === "error"
           ? `<div class="button-row">
               <a class="button" href="etkinlink://auth/callback?verification=retry">Uygulamaya dön</a>
-              <a class="button button-secondary" href="mailto:memodee333@gmail.com?subject=EtkinLink%20Doğrulama%20Yardımı">Destek al</a>
+              <a class="button button-secondary" href="${link("support.html")}">Destek al</a>
             </div>`
           : ""
     }

@@ -1,10 +1,11 @@
 # EtkinLink Web
 
-EtkinLink mobil uygulamasının yasal/şeffaflık merkezi ile e-posta doğrulama ve şifre yenileme sayfaları. Vite, TypeScript ve Supabase JS ile hazırlanmıştır; GitHub Pages üzerinde statik olarak yayınlanır.
+EtkinLink mobil uygulamasının minimal ürün sitesi, yasal/şeffaflık merkezi, destek sayfası ile e-posta doğrulama ve şifre yenileme ekranları. Figma’daki responsive tasarım sistemi Vite, TypeScript ve Supabase JS ile uygulanır; GitHub Pages üzerinde statik olarak yayınlanır.
 
 ## Sayfalar
 
-- Ana sayfa ve ürün/güvenlik özeti
+- Ana sayfa ve gerçek uygulama ekranlarından oluşan tıklanabilir ürün turu
+- Destek formu (`mailto:` üzerinden cihazın e-posta uygulamasına güvenli aktarım)
 - KVKK Aydınlatma Metni
 - Gizlilik Politikası
 - Kullanım Koşulları
@@ -13,6 +14,11 @@ EtkinLink mobil uygulamasının yasal/şeffaflık merkezi ile e-posta doğrulama
 - Hesap ve Veri Silme
 - Navigasyonda gösterilmeyen `/auth/confirm.html`
 - Navigasyonda gösterilmeyen `/auth/reset-password.html`
+- Özel 404 sayfası
+
+Ana sayfadaki ürün turu, sağlanan EtkinLink Figma prototipinden dışa aktarılan gerçek ekranları kullanır. Marka görselleri ve fontlar mobil uygulamanın takip edilen varlıklarından alınmıştır; placeholder veya uydurma profil/event verisi üretilmez.
+
+Destek sayfası herhangi bir sunucuda form verisi saklamaz. Doğrulanan form alanları cihazdaki varsayılan e-posta uygulamasında `memodee333@gmail.com` adresli bir taslağa dönüştürülür; mesaj ancak kullanıcı e-posta uygulamasında **Gönder** düğmesine bastığında iletilir.
 
 Şifre yenileme formu tek parola alanı kullanır; tekrar alanı yoktur. Parola 10–72 karakter olmalı, büyük/küçük harf ve rakam içermelidir. Göz düğmesi görünürlüğü değiştirir.
 
@@ -41,6 +47,8 @@ VITE_SUPABASE_PUBLISHABLE_KEY=sb_publishable_...
 npm run check
 npm run build
 ```
+
+Responsive QA hedefleri: Desktop 1440, Tablet 1024, Mobile 390 ve Small Mobile 320.
 
 ## GitHub Pages
 

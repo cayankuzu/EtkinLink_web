@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#5b4bff" />
+    <meta
+      name="description"
+      content="EtkinLink destek, hesap, güvenlik, gizlilik ve teknik sorun bildirim merkezi."
+    />
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <link
+      rel="canonical"
+      href="https://cayankuzu.github.io/EtkinLink_web/support.html"
+    />
+    <title>Destek · EtkinLink</title>
+  </head>
+  <body class="support-body">
+    <div data-site-header></div>
+    <main id="main-content" class="support-page">
+      <section class="support-hero">
+        <div class="container support-hero-inner">
+          <div class="support-heading">
+            <p class="eyebrow">EtkinLink Destek</p>
+            <h1>Nasıl yardımcı olabiliriz?</h1>
+            <p>
+              Hesap, güvenlik, gizlilik veya teknik bir sorunla ilgili mesajını
+              bize ilet. Gönderim, cihazındaki e-posta uygulamasında tamamlanır.
+            </p>
+          </div>
+
+          <div class="support-layout">
+            <aside class="support-aside" aria-label="Destek bilgileri">
+              <div class="support-aside-block">
+                <h2>Doğrudan e-posta</h2>
+                <p>
+                  Formu kullanmak istemezsen bize doğrudan e-posta
+                  gönderebilirsin.
+                </p>
+                <a href="mailto:memodee333@gmail.com">memodee333@gmail.com</a>
+              </div>
+              <div class="support-aside-block">
+                <h2>Güvenlik bildirimi</h2>
+                <p>
+                  Bildirilen kişinin kullanıcı adını, etkinliği ve olayın kısa
+                  açıklamasını ekle. Acil tehlike durumunda 112’yi ara.
+                </p>
+              </div>
+              <div class="support-privacy-note">
+                <span aria-hidden="true">✓</span>
+                <p>
+                  Bu sayfa mesajını saklamaz. Bilgilerin yalnızca e-posta
+                  taslağını oluşturmak için cihazında kullanılır.
+                </p>
+              </div>
+            </aside>
+
+            <section class="support-card" aria-labelledby="support-form-title">
+              <div class="support-card-heading">
+                <h2 id="support-form-title">Bize yaz</h2>
+                <p>Zorunlu alanlar yıldızla işaretlenmiştir.</p>
+              </div>
+
+              <div
+                class="support-alert support-alert-error"
+                data-validation-summary
+                role="alert"
+                hidden
+              >
+                <strong>Bilgileri kontrol et.</strong>
+                <span>İşaretli alanları düzelterek tekrar dene.</span>
+              </div>
+
+              <form class="support-form" data-support-form novalidate>
+                <div class="support-field">
+                  <label class="field-label" for="support-name">Ad soyad</label>
+                  <input
+                    class="text-input"
+                    id="support-name"
+                    name="name"
+                    type="text"
+                    maxlength="80"
+                    autocomplete="name"
+                    placeholder="Adın ve soyadın"
+                  />
+                </div>
+
+                <div class="support-field">
+                  <label class="field-label" for="support-email"
+                    >E-posta adresi <span aria-hidden="true">*</span></label
+                  >
+                  <input
+                    class="text-input"
+                    id="support-email"
+                    name="email"
+                    type="email"
+                    maxlength="160"
+                    autocomplete="email"
+                    inputmode="email"
+                    placeholder="ornek@email.com"
+                    aria-describedby="support-email-error"
+                    required
+                  />
+                  <p
+                    id="support-email-error"
+                    class="field-error support-field-error"
+                    data-error-for="email"
+                    hidden
+                  ></p>
+                </div>
+
+                <div class="support-field">
+                  <label class="field-label" for="support-topic"
+                    >Konu <span aria-hidden="true">*</span></label
+                  >
+                  <select
+                    class="text-input support-select"
+                    id="support-topic"
+                    name="topic"
+                    aria-describedby="support-topic-error"
+                    required
+                  >
+                    <option value="">Konu seç</option>
+                    <option value="technical">Teknik destek</option>
+                    <option value="account">Hesap işlemleri</option>
+                    <option value="safety">Güvenlik bildirimi</option>
+                    <option value="privacy">Gizlilik / KVKK</option>
+                    <option value="other">Diğer</option>
+                  </select>
+                  <p
+                    id="support-topic-error"
+                    class="field-error support-field-error"
+                    data-error-for="topic"
+                    hidden
+                  ></p>
+                </div>
+
+                <div class="support-field">
+                  <div class="support-label-row">
+                    <label class="field-label" for="support-message"
+                      >Mesajın <span aria-hidden="true">*</span></label
+                    >
+                    <span data-message-count>0 / 1000</span>
+                  </div>
+                  <textarea
+                    class="text-input support-textarea"
+                    id="support-message"
+                    name="message"
+                    rows="6"
+                    minlength="20"
+                    maxlength="1000"
+                    placeholder="Sorunu, hangi ekranda karşılaştığını ve varsa ilgili etkinliği anlat."
+                    aria-describedby="support-message-hint support-message-error"
+                    required
+                  ></textarea>
+                  <p id="support-message-hint" class="field-hint">
+                    En az 20 karakter yaz.
+                  </p>
+                  <p
+                    id="support-message-error"
+                    class="field-error support-field-error"
+                    data-error-for="message"
+                    hidden
+                  ></p>
+                </div>
+
+                <button class="button support-submit" type="submit" data-submit>
+                  E-posta taslağını aç
+                </button>
+                <p class="support-submit-note">
+                  Buton, cihazındaki varsayılan e-posta uygulamasını açar.
+                  Mesajın ancak e-posta uygulamasında “Gönder”e bastığında
+                  iletilir.
+                </p>
+              </form>
+
+              <div
+                class="support-state"
+                data-support-state
+                aria-live="polite"
+                tabindex="-1"
+                hidden
+              ></div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div data-site-footer></div>
+    <noscript>
+      <p class="support-noscript">
+        Formu kullanmak için JavaScript’i etkinleştir veya
+        <a href="mailto:memodee333@gmail.com">memodee333@gmail.com</a>
+        adresine e-posta gönder.
+      </p>
+    </noscript>
+    <script type="module" src="/src/support.ts"></script>
+  </body>
+</html>

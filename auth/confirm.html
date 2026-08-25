@@ -4,40 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex, nofollow, noarchive" />
-    <meta name="theme-color" content="#5b4bff" />
-    <link rel="icon" href="/EtkinLink_web/favicon.svg" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" type="image/png" href="../assets/brand/app-icon.png" />
     <title>E-posta doğrulama · EtkinLink</title>
   </head>
   <body class="auth-body">
-    <main class="auth-shell">
+    <div data-site-header></div>
+    <main id="main-content" class="auth-shell">
       <aside class="auth-aside">
-        <a class="brand" href="/EtkinLink_web/" aria-label="EtkinLink ana sayfa"
-          ><span class="brand-mark" aria-hidden="true">↔</span
-          ><span>EtkinLink</span></a
-        >
         <div class="auth-aside-copy">
+          <img
+            class="auth-app-icon"
+            src="../assets/brand/app-icon.png"
+            width="72"
+            height="72"
+            alt=""
+          />
+          <p class="eyebrow">Güvenli hesap doğrulama</p>
           <h1>Bağlantın burada başlıyor.</h1>
           <p>
             E-posta doğrulaması hesabını korur ve yalnızca sana ait bir adresle
             devam edilmesini sağlar.
           </p>
+          <div class="auth-aside-proof">
+            <span aria-hidden="true">✓</span>
+            <span>Şifre istemeyen, tek kullanımlık güvenli bağlantı</span>
+          </div>
         </div>
       </aside>
-      <section class="auth-main">
+      <section class="auth-main" aria-label="E-posta doğrulama durumu">
         <div class="auth-card">
           <div
             class="auth-state"
             data-confirm-state
+            data-state="loading"
             role="status"
             aria-live="polite"
           >
-            <div class="status-icon" aria-hidden="true">•</div>
+            <div class="status-icon is-loading" aria-hidden="true">
+              <span class="loading-ring"></span>
+            </div>
             <h1>E-posta doğrulanıyor</h1>
             <p>Güvenli bağlantı kontrol ediliyor, lütfen bekleyin…</p>
           </div>
         </div>
       </section>
     </main>
+    <script type="module" src="/src/site.ts"></script>
     <script type="module" src="/src/auth/confirm.ts"></script>
   </body>
 </html>
