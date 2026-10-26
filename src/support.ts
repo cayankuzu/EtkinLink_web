@@ -1,4 +1,4 @@
-import "./site";
+import "./main";
 
 const SUPPORT_EMAIL = "memodee333@gmail.com";
 

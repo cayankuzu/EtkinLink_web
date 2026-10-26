@@ -4,19 +4,37 @@ EtkinLink mobil uygulamasının minimal ürün sitesi, yasal/şeffaflık merkezi
 
 ## Sayfalar
 
-- Ana sayfa ve gerçek uygulama ekranlarından oluşan tıklanabilir ürün turu
-- Destek formu (`mailto:` üzerinden cihazın e-posta uygulamasına güvenli aktarım)
+- Ana sayfa ve beş adımlık “Nasıl çalışır?” bölümü (Keşfet, Etkinlik, Oda, Mesajlar, Profil)
+- Destek sayfası: e-posta adresi, form (`mailto:` üzerinden cihazın e-posta uygulamasına güvenli aktarım) ve hesap silme bağlantısı
 - KVKK Aydınlatma Metni
 - Gizlilik Politikası
 - Kullanım Koşulları
 - Çocuk Güvenliği Standartları
 - Topluluk Kuralları
 - Hesap ve Veri Silme
+- Sürümlü yasal metinler: `legal/<belge>-<tarih>.html` (aşağıya bakın)
 - Navigasyonda gösterilmeyen `/auth/confirm.html`
 - Navigasyonda gösterilmeyen `/auth/reset-password.html`
 - Özel 404 sayfası
 
-Ana sayfadaki ürün turu, sağlanan EtkinLink Figma prototipinden dışa aktarılan gerçek ekranları kullanır. Marka görselleri ve fontlar mobil uygulamanın takip edilen varlıklarından alınmıştır; placeholder veya uydurma profil/event verisi üretilmez.
+Ana sayfadaki telefon görseli Keşfet ekranının tasarımıdır; 1.0.18 prototipinin diğer ekran görselleri siteden kaldırıldı. 1.0.19’un gerçek ekran görüntüleri hazır olduğunda yalnız etkinlik, oda ve sohbet ekranları eklenir. Marka görselleri (bilet + konuşma balonu) mobil uygulamanın `mobile/src/assets/images/etkinlink-*.png` varlıklarından küçültülmüştür; fontlar mobil uygulamanın takip edilen varlıklarından alınmıştır. Placeholder veya uydurma profil/etkinlik verisi üretilmez.
+
+## Sürümlü yasal metinler
+
+Uygulama Kullanım Koşulları, Gizlilik Politikası ve KVKK metnini sürüm kimliğiyle kaydeder. Her kimliğin metni kendi değişmez adresinde kalır:
+
+| Kimlik                                                      | Adres                                                                                        |
+| ----------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `terms-2026-09-14`, `privacy-2026-09-14`, `kvkk-2026-09-14` | `legal/terms-2026-09-14.html`, `legal/privacy-2026-09-14.html`, `legal/kvkk-2026-09-14.html` |
+| `terms-2026-10-21`, `privacy-2026-10-21`, `kvkk-2026-10-21` | `legal/terms-2026-10-21.html`, `legal/privacy-2026-10-21.html`, `legal/kvkk-2026-10-21.html` |
+
+`legal/terms.html`, `legal/privacy.html` ve `legal/kvkk.html` güncel metnin birebir kopyasıdır; uygulama bu adresleri açar. Güncel kopya, sunucudaki kimlik değiştiği oturumda (production `db push`) değiştirilir. Yayımlanmış bir sürüm dosyası düzenlenmez; her düzeltme yeni kimlik ve yeni dosya alır.
+
+`*-2026-09-14.html` arşivleri, yayımlandıkları baytlarla aynı kalmalıdır. Bu yüzden:
+
+- `src/site.ts` ve `src/styles.css` **dondurulmuştur**; yalnız arşiv sayfaları (ve değişene kadar üç güncel sayfa) bunları yükler. Site değişiklikleri `src/main.ts` ve `src/main.css`'e yapılır.
+- `vite.config.ts` içindeki `keepFrozenSiteChunk` eklentisi, Vite'ın modulepreload polyfill'ini yalnız `src/site.ts` yükleyen sayfalarda bırakır; böylece dondurulmuş chunk'ın adı ve içeriği değişmez.
+- Derlemeden sonra arşiv sayfalarının SHA-256 değerini yayımlanmış hash'le karşılaştırın. Vite veya Rollup sürümü yükseltilirse bu kontrolü mutlaka yapın.
 
 Destek sayfası herhangi bir sunucuda form verisi saklamaz. Doğrulanan form alanları cihazdaki varsayılan e-posta uygulamasında `memodee333@gmail.com` adresli bir taslağa dönüştürülür; mesaj ancak kullanıcı e-posta uygulamasında **Gönder** düğmesine bastığında iletilir.
 

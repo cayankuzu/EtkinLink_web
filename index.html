@@ -6,11 +6,37 @@
     <meta name="theme-color" content="#ffffff" />
     <meta
       name="description"
-      content="EtkinLink; aynı etkinliğe ilgi duyan insanları güvenle keşfetmenizi, etkinlik odalarına katılmanızı ve karşılıklı eşleşme sonrası mesajlaşmanızı sağlar."
+      content="EtkinLink ile şehrindeki etkinlikleri keşfet, katıldığın etkinliğin odasında konuş; aynı etkinliğe katıldığın biri gönderdiğin mesaj isteğini kabul ederse bire bir sohbet et."
     />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:site_name" content="EtkinLink" />
+    <meta
+      property="og:title"
+      content="EtkinLink · Etkinlik keşfet, odada konuş"
+    />
+    <meta
+      property="og:description"
+      content="EtkinLink ile şehrindeki etkinlikleri keşfet, katıldığın etkinliğin odasında konuş; aynı etkinliğe katıldığın biri gönderdiğin mesaj isteğini kabul ederse bire bir sohbet et."
+    />
+    <meta
+      property="og:url"
+      content="https://cayankuzu.github.io/EtkinLink_web/"
+    />
+    <meta
+      property="og:image"
+      content="https://cayankuzu.github.io/EtkinLink_web/assets/brand/social.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="EtkinLink logosu: bilet ve konuşma balonu"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" type="image/png" href="./assets/brand/app-icon.png" />
     <link rel="canonical" href="https://cayankuzu.github.io/EtkinLink_web/" />
-    <title>EtkinLink · Etkinlik etrafında güvenle bağlan</title>
+    <title>EtkinLink · Etkinlik keşfet, odada konuş</title>
   </head>
   <body class="landing-body">
     <div data-site-header></div>
@@ -24,21 +50,22 @@
             height="96"
             alt="EtkinLink uygulama ikonu"
           />
-          <p class="eyebrow">Etkinlik merkezli sosyal keşif</p>
-          <h1 id="hero-title">Etkinlik etrafında<br />güvenle bağlan.</h1>
+          <p class="eyebrow">Etkinlik keşfi ve etkinlik odaları</p>
+          <h1 id="hero-title">Etkinlik keşfet,<br />odada konuş.</h1>
           <p class="hero-lead">
-            Aynı etkinliğe ilgi duyan insanları keşfet, katıldığın etkinliğin
-            odasına katıl ve yalnızca karşılıklı beğeni sonrası bire bir
-            mesajlaş.
+            Şehrindeki konser, tiyatro, sergi ve atölyeleri tarihe ve kategoriye
+            göre bul. Katıldığın etkinliğin odasında diğer katılımcılarla konuş.
+            Aynı etkinliğe katıldığın biri gönderdiğin mesaj isteğini kabul
+            ederse bire bir sohbet et.
           </p>
           <div class="hero-actions">
-            <a class="button" href="#nasil-calisir">Ürün turunu keşfet</a>
+            <a class="button" href="#nasil-calisir">Nasıl çalıştığını gör</a>
             <a class="button button-secondary" href="./legal/community.html"
               >Topluluk kuralları</a
             >
           </div>
           <p class="hero-caption">
-            18+ · Güvenlik, karşılıklı onay ve etkinlik bağlamı varsayılandır.
+            18+ · Mesaj isteği onayı, bildirme ve engelleme varsayılandır.
           </p>
         </div>
       </section>
@@ -50,58 +77,74 @@
       >
         <div class="container product-tour-panel">
           <div class="tour-copy">
-            <p class="eyebrow">Canlı ürün turu</p>
-            <h2 id="tour-title">Beş gerçek ekran. Tek bir akış.</h2>
+            <p class="eyebrow">Nasıl çalışır?</p>
+            <h2 id="tour-title">Beş adım. Tek bir akış.</h2>
             <p>
-              Mockup, gönderdiğin EtkinLink prototipindeki gerçek ekranları
-              sırayla gösterir.
+              EtkinLink’te her şey etkinlikle başlar: önce etkinliği bulursun,
+              sonra o etkinliğin odasına katılırsın.
             </p>
           </div>
 
-          <a
-            class="phone-mock"
-            data-product-tour
-            href="https://www.figma.com/proto/RLPPToWydcFxLtnlvTr0mi/EtkinLink?node-id=32-1772&viewport=-607%2C-758%2C0.69&t=BmlrdaiaacIsarlK-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=97%3A386&show-proto-sidebar=1&page-id=12%3A8"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="EtkinLink canlı prototipini yeni sekmede aç"
-          >
-            <span class="phone-screen">
-              <img
-                data-tour-image
-                src="./assets/product/01-discover.png"
-                width="390"
-                height="844"
-                alt="EtkinLink Keşfet ekranı"
-              />
-            </span>
-            <span class="phone-hover" aria-hidden="true">
-              <span>Canlı prototipi aç</span><span>↗</span>
-            </span>
-          </a>
+          <div class="tour-layout">
+            <figure class="phone-mock">
+              <span class="phone-screen">
+                <img
+                  src="./assets/product/01-discover.png"
+                  width="390"
+                  height="844"
+                  alt="EtkinLink Keşfet ekranı: yaklaşan etkinlikler listesi"
+                />
+              </span>
+            </figure>
 
-          <div
-            class="tour-controls"
-            role="group"
-            aria-label="Ürün turu ekranları"
-          >
-            <button class="is-active" type="button" data-tour-index="0">
-              Keşfet
-            </button>
-            <span aria-hidden="true">•</span>
-            <button type="button" data-tour-index="1">Etkinlik</button>
-            <span aria-hidden="true">•</span>
-            <button type="button" data-tour-index="2">Oda</button>
-            <span aria-hidden="true">•</span>
-            <button type="button" data-tour-index="3">Eşleşme</button>
-            <span aria-hidden="true">•</span>
-            <button type="button" data-tour-index="4">Mesaj</button>
+            <ol class="tour-steps">
+              <li>
+                <h3>Keşfet</h3>
+                <p>
+                  Şehrini seç; etkinlikleri tarihe ve kategoriye göre filtrele
+                  ya da adıyla ara.
+                </p>
+              </li>
+              <li>
+                <h3>Etkinlik</h3>
+                <p>
+                  Etkinlik sayfasında başlangıç ve bitiş zamanını, mekânı ve
+                  adresi gör. İlgini çekeni kaydet ya da etkinliğe katıl.
+                </p>
+              </li>
+              <li>
+                <h3>Oda</h3>
+                <p>
+                  Bir etkinliğe katıldığında o etkinliğin odasına girersin. Oda
+                  etkinlikten 13 gün önce açılır; etkinlik bittikten 3 gün sonra
+                  kapanır.
+                </p>
+              </li>
+              <li>
+                <h3>Mesajlar</h3>
+                <p>
+                  Aynı etkinliğe katıldığın biriyle bire bir konuşmak istersen,
+                  odadaki mesajından ona mesaj isteği gönder. Karşı taraf kabul
+                  ederse sohbet açılır; kabul etmezse açılmaz.
+                </p>
+              </li>
+              <li>
+                <h3>Profil</h3>
+                <p>
+                  Doğum tarihin yalnızca 18 yaş kontrolü için kullanılır;
+                  profilinde başkalarına gösterilmez. Hesabını uygulama içinden,
+                  Ayarlar’dan tamamen sil.
+                </p>
+              </li>
+            </ol>
           </div>
-          <p class="tour-hint">Üzerine gel veya dokun · prototipi aç</p>
+          <p class="tour-note">
+            Telefondaki görsel, Keşfet ekranının tasarımıdır.
+          </p>
         </div>
       </section>
     </main>
     <div data-site-footer></div>
-    <script type="module" src="/src/site.ts"></script>
+    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

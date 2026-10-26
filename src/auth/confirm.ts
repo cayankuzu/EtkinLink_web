@@ -1,6 +1,6 @@
 import type { EmailOtpType } from "@supabase/supabase-js";
 
-import "../styles.css";
+import "../main.css";
 import {
   clearSensitiveUrl,
   getAuthClient,
