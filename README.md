@@ -17,7 +17,7 @@ EtkinLink mobil uygulamasının minimal ürün sitesi, yasal/şeffaflık merkezi
 - Navigasyonda gösterilmeyen `/auth/reset-password.html`
 - Özel 404 sayfası
 
-Ana sayfadaki telefon görseli Keşfet ekranının tasarımıdır; 1.0.18 prototipinin diğer ekran görselleri siteden kaldırıldı. 1.0.19’un gerçek ekran görüntüleri hazır olduğunda yalnız etkinlik, oda ve sohbet ekranları eklenir. Marka görselleri (bilet + konuşma balonu) mobil uygulamanın `mobile/src/assets/images/etkinlink-*.png` varlıklarından küçültülmüştür; fontlar mobil uygulamanın takip edilen varlıklarından alınmıştır. Placeholder veya uydurma profil/etkinlik verisi üretilmez.
+Sitede şu an ürün ekran görüntüsü yoktur: 1.0.18 prototipinin ve Figma tasarımının görselleri kaldırıldı, “Nasıl çalışır?” bölümü yalnız metindir. 1.0.19’un gerçek ekran görüntüleri hazır olduğunda eklenir. Marka görselleri (bilet + konuşma balonu) mobil uygulamanın `mobile/src/assets/images/etkinlink-*.png` varlıklarından küçültülmüştür; fontlar mobil uygulamanın takip edilen varlıklarından alınmıştır. Placeholder veya uydurma profil/etkinlik verisi üretilmez.
 
 ## Sürümlü yasal metinler
 
@@ -32,9 +32,17 @@ Uygulama Kullanım Koşulları, Gizlilik Politikası ve KVKK metnini sürüm kim
 
 `*-2026-09-14.html` arşivleri, yayımlandıkları baytlarla aynı kalmalıdır. Bu yüzden:
 
-- `src/site.ts` ve `src/styles.css` **dondurulmuştur**; yalnız arşiv sayfaları (ve değişene kadar üç güncel sayfa) bunları yükler. Site değişiklikleri `src/main.ts` ve `src/main.css`'e yapılır.
-- `vite.config.ts` içindeki `keepFrozenSiteChunk` eklentisi, Vite'ın modulepreload polyfill'ini yalnız `src/site.ts` yükleyen sayfalarda bırakır; böylece dondurulmuş chunk'ın adı ve içeriği değişmez.
-- Derlemeden sonra arşiv sayfalarının SHA-256 değerini yayımlanmış hash'le karşılaştırın. Vite veya Rollup sürümü yükseltilirse bu kontrolü mutlaka yapın.
+- `src/site.ts` ve `src/styles.css` yalnız bu üç arşiv sayfası tarafından yüklenir; diğer bütün sayfalar `src/main.ts` ve `src/main.css` kullanır. Site değişiklikleri bu iki dosyaya yapılır.
+- Arşiv HTML'i `assets/site-BzGedLMH.js` ve `assets/site-E29y09jf.css` adlarını içerir. `src/styles.css` **dondurulmuştur**; CSS dosyasının adı içeriğinden hesaplanır.
+- `src/site.ts` arşivlerin başlığını ve altbilgisini çizer. İçeriği değişebilir, ama `vite.config.ts` bu chunk'ın adını `assets/site-BzGedLMH.js` olarak sabitler (`frozenSiteChunk`). 26 Ekim 2026'da prototip bağlantıları, eski ürün turu ve eski altbilgi cümlesi bu dosyadan kaldırıldı; arşiv HTML'i değişmedi.
+- `keepFrozenSiteChunk` eklentisi, Vite'ın modulepreload polyfill'ini yalnız `src/site.ts` yükleyen sayfalarda bırakır. Aksi halde polyfill ayrı bir chunk'a taşınır ve arşiv sayfalarına yeni bir `<link rel="modulepreload">` eklenir.
+- Derlemeden sonra `dist/legal/*-2026-09-14.html` dosyalarının SHA-256 değerini aşağıdaki yayımlanmış değerlerle karşılaştırın. Vite veya Rollup sürümü yükseltilirse bu kontrolü mutlaka yapın.
+
+| Dosya                           | SHA-256                                                            |
+| ------------------------------- | ------------------------------------------------------------------ |
+| `legal/terms-2026-09-14.html`   | `fd86673c01373f95281be0280cdda106f8e70317c5981f3fe7cb0dfb11e9328b` |
+| `legal/privacy-2026-09-14.html` | `39b92c9eb0d2e6d093fe2964cd2a798a73344871073a24bee16c5c60b57216f4` |
+| `legal/kvkk-2026-09-14.html`    | `f9c8f7f562af5798fbf488593cb6b97a75ef5eadd6a4383f2f36e86f9d3fe8cb` |
 
 Destek sayfası herhangi bir sunucuda form verisi saklamaz. Doğrulanan form alanları cihazdaki varsayılan e-posta uygulamasında `memodee333@gmail.com` adresli bir taslağa dönüştürülür; mesaj ancak kullanıcı e-posta uygulamasında **Gönder** düğmesine bastığında iletilir.
 

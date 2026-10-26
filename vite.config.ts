@@ -1,5 +1,5 @@
 import { resolve } from "node:path";
-import { defineConfig, type Plugin } from "vite";
+import { defineConfig, type Plugin, type Rollup } from "vite";
 
 const page = (path: string) => resolve(import.meta.dirname, path);
 
@@ -7,17 +7,32 @@ const modulePreloadPolyfillImport = 'import "vite/modulepreload-polyfill";\n';
 
 /**
  * The archived legal texts (`legal/*-2026-09-14.html`) must keep the bytes
- * they were published with, and so must `legal/terms.html`,
- * `legal/privacy.html` and `legal/kvkk.html` until the 1.0.19 versions
- * replace them. Those pages load the frozen `src/site.ts`, so the chunk built
- * from it has to keep its content and its hashed name.
+ * they were published with. They are the only pages that load `src/site.ts`
+ * (with the frozen `src/styles.css`), and their HTML names the script chunk
+ * built from it and that chunk's stylesheet, so neither name may change.
  *
+ * The stylesheet keeps its name because `src/styles.css` stays frozen and its
+ * hash comes from its content. The script's hash would follow every edit to
+ * `src/site.ts`, so its published name is pinned here instead.
+ */
+const frozenSiteChunk = "assets/site-BzGedLMH.js";
+const hashedChunk = "assets/[name]-[hash].js";
+
+const isFrozenSiteChunk = (chunk: Rollup.PreRenderedChunk): boolean =>
+  chunk.name === "site" &&
+  chunk.moduleIds.some((id) => id.replace(/\\/g, "/").endsWith("/src/site.ts"));
+
+const chunkFileName = (chunk: Rollup.PreRenderedChunk): string =>
+  isFrozenSiteChunk(chunk) ? frozenSiteChunk : hashedChunk;
+
+/**
  * Vite imports its modulepreload polyfill into every page, and Rollup puts a
  * module in the chunk shared by the pages that import it. If the pages on
  * `src/main.ts` imported the polyfill too, it would move into a chunk of its
- * own, the frozen chunk would get a new name and every archived page would
- * change. Only pages that load `src/site.ts` keep the polyfill; it only
- * speeds up `<link rel="modulepreload">` in browsers that lack it.
+ * own, the archived pages would gain a `<link rel="modulepreload">` to that
+ * chunk and their bytes would change. Only pages that load `src/site.ts` keep
+ * the polyfill; it only speeds up `<link rel="modulepreload">` in browsers
+ * that lack it.
  */
 function keepFrozenSiteChunk(): Plugin {
   return {
@@ -53,6 +68,10 @@ export default defineConfig({
   build: {
     target: "es2022",
     rollupOptions: {
+      output: {
+        entryFileNames: chunkFileName,
+        chunkFileNames: chunkFileName,
+      },
       input: {
         home: page("index.html"),
         kvkk: page("legal/kvkk.html"),
