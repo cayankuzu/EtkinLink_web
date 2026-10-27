@@ -24,7 +24,7 @@
           </p>
           <div class="legal-meta">
             <span class="tag"
-              >Yürürlük: 26 Ekim 2026 · Sürüm: kvkk-2026-10-21</span
+              >Yürürlük: 27 Ekim 2026 · Sürüm: kvkk-2026-10-27</span
             >
           </div>
         </div>
@@ -33,10 +33,12 @@
         <article class="legal-content">
           <h2 id="sorumlu">1. Veri sorumlusu</h2>
           <p>
-            EtkinLink hizmeti bakımından veri sorumlusu EtkinLink (MeMoDe)’dir.
-            KVKK kapsamındaki talepleriniz için
+            EtkinLink hizmeti kapsamında kişisel verileriniz, veri sorumlusu
+            sıfatıyla Çayan Kuzu (EtkinLink) tarafından işlenir. KVKK
+            kapsamındaki başvurular e-postayla alınır; talepleriniz için
             <a href="mailto:memodee333@gmail.com">memodee333@gmail.com</a>
-            adresine başvurabilirsiniz.
+            adresine başvurabilirsiniz. Genel sorular için
+            <a href="../support.html">Destek</a> sayfasını kullanabilirsiniz.
           </p>
           <div class="notice">
             Başvurunuzda kimliğinizi doğrulamaya yetecek bilgi, talebinizin
@@ -47,25 +49,43 @@
           <h2 id="veriler">2. İşlenen kişisel veriler</h2>
           <ul>
             <li>
-              <strong>Kimlik ve hesap:</strong> ad-soyad, kullanıcı adı,
-              doğum/yaş bilgisi, cinsiyet ve e-posta adresi.
+              <strong>Kimlik ve hesap:</strong> ad-soyad, kullanıcı adı, doğum
+              tarihi ve e-posta adresi. Doğum tarihi yalnız 18 yaş kontrolü için
+              kullanılır ve kimseye gösterilmez.
             </li>
             <li>
-              <strong>Profil:</strong> fotoğraflar, biyografi, ilgi alanları ve
-              görünürlük tercihleri.
+              <strong>Profil:</strong> tek profil fotoğrafı, şehir, biyografi ve
+              ilgi alanları.
             </li>
             <li>
-              <strong>Etkinlik:</strong> katılmayı planladığınız ve
-              katıldığınızı belirttiğiniz etkinlikler, oda üyelikleri.
+              <strong>Etkinlik:</strong> katılmayı planladığınız, katıldığınızı
+              belirttiğiniz ve kaydettiğiniz etkinlikler, oda üyelikleri.
             </li>
             <li>
               <strong>Etkileşim:</strong> mesaj istekleri ve yanıtları, açılan
-              sohbetler, oda mesajları, özel mesajlar, okundu ve bildirim
-              tercihleri.
+              sohbetler, oda mesajları, özel mesajlar, okundu bilgisi, sohbet
+              ayarları, bildirim tercihleri ve size gönderilen bildirimlerin
+              başlık ve metni (gönderenin adı ve mesaj ön izlemesi dahil).
+            </li>
+            <li>
+              <strong>Cihaz ve bildirim:</strong> push bildirim anahtarı (push
+              token), uygulamanın cihazınızda oluşturduğu kurulum kimliği,
+              platform ve uygulama sürümü.
+            </li>
+            <li>
+              <strong>Yasal onay:</strong> kabul ettiğiniz Kullanım Koşulları
+              ile okuduğunuzu onayladığınız Gizlilik Politikası ve KVKK
+              Aydınlatma Metni sürümlerinin kimlikleri ve onay zamanı.
             </li>
             <li>
               <strong>Güvenlik:</strong> engel ve şikâyet kayıtları, sınırlı
               oturum, cihaz, sürüm, IP ve hata kayıtları.
+            </li>
+            <li>
+              <strong>İsteğe bağlı analitik:</strong> yalnız Ayarlar’daki
+              “İsteğe bağlı kullanım analitiği” seçeneğini açarsanız gönderilen,
+              hesabınızla ilişkilendirilmeyen kullanım olayları; seçenek
+              varsayılan olarak kapalıdır ve hizmet henüz etkinleştirilmemiştir.
             </li>
             <li>
               <strong>İletişim:</strong> destek talebi ve sizin tarafınızdan
@@ -73,8 +93,17 @@
             </li>
           </ul>
           <p>
-            Hassas konumunuzu zorunlu olarak istemeyiz. Etkinlik katılımı MVP
-            aşamasında biletle doğrulanmaz; katılım beyanınıza dayanır.
+            Cinsiyet artık sorulmaz; 1.0.19 sürümünden önce verdiyseniz kayıtlı
+            kalır, kimseye gösterilmez ve hiçbir özellikte kullanılmaz. Önceki
+            sürümlerden kalan diğer profil fotoğrafları kimseye gösterilmez ve
+            fotoğrafınızı değiştirdiğinizde silinir. 1.0.18 sürümünden kalan
+            eski keşif filtresi kayıtları silinmiştir; o sürümde diğer
+            katılımcılara verdiğiniz olumlu ve olumsuz yanıtlar ise sırasıyla
+            mesaj isteği ve ret yanıtı olarak saklanır.
+          </p>
+          <p>
+            Cihaz konumunuz alınmaz; şehri siz seçersiniz. Etkinlik katılımı
+            biletle doğrulanmaz; katılım beyanınıza dayanır.
           </p>
 
           <h2 id="amac">3. İşleme amaçları</h2>
@@ -87,13 +116,23 @@
               Etkinlikleri keşfetme, oda üyeliği, mesaj isteği ve bire bir
               mesajlaşma özelliklerini sunmak.
             </li>
-            <li>Tercihlere uygun etkinlik sonuçları göstermek.</li>
+            <li>
+              Seçtiğiniz şehre ve tercihlere uygun etkinlik sonuçları göstermek.
+            </li>
+            <li>
+              Mesaj, mesaj isteği ve etkinlik hatırlatması bildirimleri
+              göndermek.
+            </li>
             <li>
               Spam, taciz, sahte hesap, çocuk güvenliği riski ve kötüye
               kullanımla mücadele etmek.
             </li>
             <li>
               Teknik arızaları gidermek, güvenliği ve performansı iyileştirmek.
+            </li>
+            <li>
+              İzin vermeniz hâlinde uygulamanın kullanımını hesabınızla
+              ilişkilendirmeden ölçmek.
             </li>
             <li>
               Yasal yükümlülükleri yerine getirmek ve hakları tesis, kullanma
@@ -113,16 +152,88 @@
 
           <h2 id="aktarim">5. Aktarım ve hizmet sağlayıcılar</h2>
           <p>
-            Veriler yalnızca hizmetin sunulması için gerekli ölçüde; kimlik
-            doğrulama/veritabanı için Supabase, işlem e-postaları için Brevo,
-            yasal sitenin barındırılması için GitHub Pages ve ilgili teknik
-            altyapı sağlayıcılarıyla paylaşılabilir. Etkinlik içerikleri
-            etkinlik.io RSS kaynağından alınır; profil veya mesaj verileri bu
-            kaynağa gönderilmez.
+            Veriler yalnızca hizmetin sunulması için gerekli ölçüde aşağıdaki
+            hizmet sağlayıcılara aktarılır:
+          </p>
+          <ul>
+            <li>
+              <strong>Supabase</strong> (Japonya, Tokyo): kimlik doğrulama,
+              veritabanı, dosya depolama ve gerçek zamanlı işlevler; hesap,
+              profil, etkinlik, mesaj ve sohbet verileri. Supabase’e giden
+              istekler, Supabase’in kullandığı Cloudflare ağ altyapısından
+              geçer.
+            </li>
+            <li>
+              <strong>Sentry</strong> (Avrupa Birliği): çökme ve performans
+              tanılama verileri; kimliğinizle ilişkilendirilmez, gönderim
+              sırasında IP adresi gibi bağlantı bilgileri işlenebilir.
+            </li>
+            <li>
+              <strong>Expo Push Service</strong> (ABD),
+              <strong>Google Firebase Cloud Messaging</strong> ve
+              <strong>Apple Push Notification service</strong> (ABD merkezli
+              küresel altyapı): bildirim teslimi; push token ile bildirim
+              başlığı ve metni. Bildirim metni; bire bir mesaj bildirimlerinde
+              gönderenin profilindeki adını (ad-soyad) ve okunmamış son
+              mesajlarının ön izlemesini, etkinlik odası bildirimlerinde
+              etkinliğin adını, gönderenin profilindeki adını ve mesajın ön
+              izlemesini, mesaj isteği bildirimlerinde isteği gönderenin kısa
+              adını (ör. “Ayşe K.”) ve etkinliğin adını, sohbet bildirimlerinde
+              karşı tarafın kısa adını, etkinlik hatırlatmalarında ise
+              etkinliğin adını içerebilir. Bildirimle birlikte alıcının hesap
+              kimliği ve bildirimin açacağı ekranı belirten kimlikler; mesaj
+              isteği bildirimlerinde ayrıca isteği gönderenin hesap kimliği,
+              etkinlik hatırlatmalarında etkinliğin başlangıç zamanı aktarılır.
+            </li>
+            <li>
+              <strong>Expo EAS Update</strong> (ABD): uygulama güncellemelerinin
+              dağıtımı; uygulama her başlatıldığında güncelleme denetimi için IP
+              adresi, platform, uygulama ve çalışma zamanı sürümü, güncelleme
+              kanalı ve güncelleme hizmeti için cihazınızda oluşturulan rastgele
+              istemci kimliği.
+            </li>
+            <li>
+              <strong>Brevo</strong> (Avrupa Birliği): yalnız e-posta doğrulama
+              ve parola yenileme gibi işlem e-postaları; e-posta adresi ve
+              e-postanın içeriği.
+            </li>
+            <li>
+              <strong>Google Gmail</strong> (ABD merkezli küresel altyapı):
+              destek ve KVKK başvurularının alındığı e-posta hizmeti; e-posta
+              adresiniz ve e-postanızda paylaştığınız bilgiler.
+            </li>
+            <li>
+              <strong>GitHub Pages</strong> (ABD): yasal ve hesap işlemi
+              sayfalarının barındırılması; ziyaret sırasında IP adresi gibi
+              bağlantı bilgileri.
+            </li>
+            <li>
+              <strong>PostHog</strong>: yalnız “İsteğe bağlı kullanım analitiği”
+              seçeneğini açarsanız hesabınızla ilişkilendirilmeyen kullanım
+              olayları. Hizmet henüz etkinleştirilmemiştir ve şu anda veri
+              aktarılmaz; barındırma bölgesi, hizmet etkinleştirilmeden önce bu
+              metnin güncellenmiş sürümünde belirtilir.
+            </li>
+          </ul>
+          <p>
+            Yukarıdaki listede yer alan hizmet sağlayıcıların tamamı Türkiye
+            dışındadır. Kişisel verileriniz, KVKK’nın 9. maddesi kapsamında bu
+            sağlayıcılara yurt dışına aktarılır ve belirtilen ülke ve bölgelerde
+            işlenir.
           </p>
           <p>
-            Yurt dışı aktarım gereken durumlarda KVKK’nın güncel aktarım
-            şartları ve uygun güvenceler uygulanır.
+            Etkinlik içerikleri herkese açık etkinlik bilgisi kaynağı olan
+            etkinlik.io’dan alınır. Etkinlik listesi ve ayrıntıları
+            sunucularımız aracılığıyla etkinlik.io API’sinden alınır; etkinlik
+            görsellerini (cdn.etkinlik.io) ise cihazınız doğrudan
+            etkinlik.io’dan yükler. Bu kaynağa sunucularımız üzerinden
+            ulaşılamadığında cihazınız etkinlik listesini seçtiğiniz şehir ve
+            kategori filtreleriyle doğrudan etkinlik.io RSS kaynağından,
+            açtığınız etkinliğin sayfasını da doğrudan etkinlik.io’dan ister. Bu
+            isteklerde etkinlik.io cihazınızın IP adresini, görüntülediğiniz
+            etkinlikleri ve seçtiğiniz şehir ve kategori filtrelerini görebilir;
+            bu bilgiler etkinlik.io’nun kendi gizlilik politikasına tabidir.
+            Hesap, profil veya mesaj verileriniz etkinlik.io’ya gönderilmez.
           </p>
 
           <h2 id="saklama">6. Saklama ve silme</h2>
@@ -130,10 +241,17 @@
             Hesap verileri hesabınız aktif olduğu sürece; mesaj, mesaj isteği ve
             sohbet verileri ürün içi görünürlük kurallarına göre; güvenlik ve
             şikâyet kayıtları amacı için gerekli, ölçülü süre boyunca saklanır.
-            Hesap silindiğinde hesap, profil, fotoğraf, üyelik, mesaj isteği,
-            sohbet ve mesaj verileri kalıcı silme sürecine alınır. Kanunen
-            saklanması zorunlu çok sınırlı kayıtlar varsa erişimi kısıtlanarak
-            yalnızca zorunlu süre boyunca tutulur veya anonimleştirilir.
+            Size gönderilen bildirimlerin başlık ve metni hesabınızı silene
+            kadar saklanır; bir bildirimde adı veya mesajı yer alan kişi
+            hesabını sildiğinde, o kişinin adı ve mesaj metni bildirim
+            kayıtlarından silinir. Hesabınızı
+            <strong>Profil › Ayarlar › Hesabı sil</strong> yolundan sildiğinizde
+            hesap, profil, fotoğraf, üyelik, mesaj isteği, sohbet ve mesaj
+            verileri onayınızla hemen silinir; günlük yedeklerdeki kopyalar en
+            geç 7 gün içinde silinir. Dolandırıcılık önleme, güvenlik olayı,
+            devam eden şikâyet veya yasal yükümlülük nedeniyle tutulması zorunlu
+            asgari kayıtlar varsa erişimi kısıtlanarak yalnızca gerekli süre
+            boyunca tutulur veya anonimleştirilir.
           </p>
 
           <h2 id="haklar">7. KVKK m.11 kapsamındaki haklarınız</h2>
@@ -144,6 +262,21 @@
             bildirilmesini isteme, otomatik analiz sonucuna itiraz etme ve
             kanuna aykırılık nedeniyle zararın giderilmesini isteme haklarına
             sahipsiniz.
+          </p>
+          <p>
+            Hesap verilerinizin bir kopyasını
+            <strong>Profil › Ayarlar › Verilerimi dışa aktar</strong> yolundan
+            JSON biçiminde alabilir (24 saatte en fazla 3 kez), hesabınızı ve
+            verilerinizi <strong>Profil › Ayarlar › Hesabı sil</strong> yolundan
+            uygulama içinden kalıcı olarak silebilirsiniz. Dışa aktarım;
+            aldığınız mesajları, diğer kullanıcıların profil ve iletişim
+            bilgilerini, push token ve kurulum kimliği gibi cihaz kayıtlarını,
+            bildirim içeriklerini, iç moderasyon kayıtlarını ve 1.0.19
+            sürümünden önce verdiyseniz cinsiyet bilginizi içermez. Bu kapsam
+            dışında kalan kendi kişisel verileriniz ve diğer talepleriniz için
+            başvurunuzu
+            <a href="mailto:memodee333@gmail.com">memodee333@gmail.com</a>
+            adresine e-postayla iletebilirsiniz.
           </p>
           <p>
             Talepler ücretsiz değerlendirilir; işlemin ayrıca maliyet
