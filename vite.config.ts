@@ -83,6 +83,8 @@ export default defineConfig({
         kvkk20261021: page("legal/kvkk-2026-10-21.html"),
         privacy20261021: page("legal/privacy-2026-10-21.html"),
         terms20261021: page("legal/terms-2026-10-21.html"),
+        kvkk20261027: page("legal/kvkk-2026-10-27.html"),
+        privacy20261027: page("legal/privacy-2026-10-27.html"),
         childSafety: page("legal/child-safety.html"),
         community: page("legal/community.html"),
         accountDeletion: page("legal/account-deletion.html"),

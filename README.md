@@ -23,10 +23,11 @@ Sitede şu an ürün ekran görüntüsü yoktur: 1.0.18 prototipinin ve Figma ta
 
 Uygulama Kullanım Koşulları, Gizlilik Politikası ve KVKK metnini sürüm kimliğiyle kaydeder. Her kimliğin metni kendi değişmez adresinde kalır:
 
-| Kimlik                                                      | Adres                                                                                        |
-| ----------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `terms-2026-09-14`, `privacy-2026-09-14`, `kvkk-2026-09-14` | `legal/terms-2026-09-14.html`, `legal/privacy-2026-09-14.html`, `legal/kvkk-2026-09-14.html` |
-| `terms-2026-10-21`, `privacy-2026-10-21`, `kvkk-2026-10-21` | `legal/terms-2026-10-21.html`, `legal/privacy-2026-10-21.html`, `legal/kvkk-2026-10-21.html` |
+| Kimlik                                                                             | Adres                                                                                        |
+| ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `terms-2026-09-14`, `privacy-2026-09-14`, `kvkk-2026-09-14`                        | `legal/terms-2026-09-14.html`, `legal/privacy-2026-09-14.html`, `legal/kvkk-2026-09-14.html` |
+| `terms-2026-10-21`, `privacy-2026-10-21`, `kvkk-2026-10-21`                        | `legal/terms-2026-10-21.html`, `legal/privacy-2026-10-21.html`, `legal/kvkk-2026-10-21.html` |
+| `privacy-2026-10-27`, `kvkk-2026-10-27` (Koşullar `terms-2026-10-21` olarak kalır) | `legal/privacy-2026-10-27.html`, `legal/kvkk-2026-10-27.html`                                |
 
 `legal/terms.html`, `legal/privacy.html` ve `legal/kvkk.html` güncel metnin birebir kopyasıdır; uygulama bu adresleri açar. Güncel kopya, sunucudaki kimlik değiştiği oturumda (production `db push`) değiştirilir. Yayımlanmış bir sürüm dosyası düzenlenmez; her düzeltme yeni kimlik ve yeni dosya alır.
 
